@@ -103,6 +103,7 @@ fluoride_defaults {
     name: "fluoride_defaults",
     defaults: ["fluoride_defaults_fuzzable", "fluoride_types_defaults"],
     shared_libs: [
+        "libbase",
         "libcutils",
         "libgrpc++",
         "libgrpc_wrap",

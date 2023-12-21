@@ -98,7 +98,7 @@ void OnceTimer::CancelHelper(std::promise<void> promise) {
 void OnceTimer::CancelClosure(std::promise<void> promise) {
   message_loop_thread_ = nullptr;
   task_wrapper_.Cancel();
-  std::move(task_);
+  (void)std::move(task_);
   delay_ = base::TimeDelta();
   promise.set_value();
 }
